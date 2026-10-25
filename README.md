@@ -1,19 +1,39 @@
-# Halden H1: scrollytelling landing page (Next.js App Router + Framer Motion)
+ # Halden
 
-## Run
-    npm install
-    npm run frames -- /path/to/your/jpg/folder "#121a2b"   # copies + renames frames, sets the count
-    npm run dev
+ A modern 3D web experience built to showcase immersive visuals, smooth motion, and interactive storytelling in the browser.
 
-The frames script natural-sorts your JPGs (so img2 comes before img10), writes them to
-public/frames/frame_0001.jpg ..., and updates lib/frames.json. The second argument is the
-letterbox colour; match it to your frames' background.
+ ## Overview
 
-## Tuning
-- Scroll length: `.track { height: 800vh }` in app/globals.css. Longer means slower scrubbing.
-- Text timing: the `from` / `to` props on each <Beat> in components/ScrollSequence.tsx (0 to 1).
-  Line them up with the frame ranges where parts separate.
-- Smoothing: the useSpring values in ScrollSequence.
-- File size: 200+ full-HD JPGs can total 40 MB or more. Export at about 1920 px wide, quality 70-80,
-  or convert to WebP, to keep loading quick. If you convert, change the extension in lib/frames.ts
-  and scripts/prepare-frames.mjs.
+ Halden is a creative frontend project focused on bringing depth and atmosphere to the web. It combines a clean interface with responsive layouts, animated transitions, and 3D-inspired interactions.
+
+ ## Highlights
+
+ - Immersive 3D-focused visual design
+ - Smooth, engaging interactions and transitions
+ - Responsive experience across desktop and mobile screens
+ - Modular structure for easy experimentation and iteration
+
+ ## Getting started
+
+ Clone the repository, install the project dependencies, and start the development server using the scripts defined by the project:
+
+ ```bash
+ git clone <repository-url>
+ cd halden
+ npm install
+ npm run dev
+ ```
+
+ Open the local URL shown in the terminal to view the project.
+
+ ## Production build
+
+ ```bash
+ npm run build
+ ```
+
+ ## Project structure
+
+ Keep reusable interface elements, visual effects, and page sections organized by responsibility so the experience remains easy to maintain as it grows.
+
+
